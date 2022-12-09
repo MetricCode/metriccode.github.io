@@ -1,0 +1,44 @@
+.social-icons {
+    display:flex ;
+    justify-content: center;
+    list-style: none;
+}
+.social-icons li {
+    margin: 0 10px;
+
+}
+.social-icons li a {
+    font-size: 30px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: 0.5s ease;
+}
+.social-icons li a:hover {
+    background: black;
+    background-clip: text;
+    color:orange;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    font-size: 40px;
+}
+.social-icons li a::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: orange;
+    transform: scale(1);
+    transition: 0.5s ease-in-out;
+}
+.social-icons li a:hover::before {
+    transform: scale(0);
+}
