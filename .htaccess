@@ -4,3 +4,16 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC, L]
+
+
+# Deny access to .htaccess
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+# Hide the contents of directories
+IndexIgnore *
+
+
+#https://www.opentechguides.com/how-to/article/apache/115/htaccess-file-dir-security.html
